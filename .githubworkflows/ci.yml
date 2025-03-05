@@ -3,7 +3,7 @@ name: CI Pipeline for HTML/CSS/JS
 on:
   push:
     branches:
-      - main  # Se ejecuta cuando hay un push a la rama "main"
+      - main  # Se ejecuta cuando hay un push a la rama "main // probando"
   pull_request:
     branches:
       - main  # También se ejecuta cuando hay un pull request a la rama "main"
