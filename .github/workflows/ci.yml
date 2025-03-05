@@ -17,12 +17,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3  # Descarga el código del repositorio
 
-      # Paso 2: Validar HTML (opcional)
+            # Paso 2: Validar HTML (opcional)
       - name: Validate HTML
         uses: actions/github-script@v6
         with:
           script: |
-            const { exec } = require('child_process');
+            const exec = require('child_process').exec;
             exec('npx html-validator-cli --quiet', (error, stdout, stderr) => {
               if (error) {
                 console.error(`Error: ${error.message}`);
@@ -30,6 +30,7 @@ jobs:
               }
               console.log(stdout);
             });
+
 
       # Paso 3: Validar JavaScript (opcional)
       - name: Validate JavaScript
